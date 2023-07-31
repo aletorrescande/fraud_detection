@@ -22,7 +22,7 @@ This notebook includes the calculation of outliers using the standard deviation 
 The graphs created in this jupyter notebook evaluate the transactions of cardholder 2, 18 and 25.
 
 We looked at the cardholder 2 and 18 together to evaluate risk of fraud. Here is the result
-<img src="graphs/Cardholder_2.png" width="485.4" height="370.8"> <br> 
+<img src="Graphs/Cardholder_2.png" width="485.4" height="370.8"> <br> 
 
 The first thing we can notice in this graph is that the amount range of the transactions is very different between cardholders. Cardholder 2 has a range of $1 to $20 and cardholder 18 $1 to $1839 (See challenge.ipynb). Most of cardholder 18 transactions stay below $100 dolars with a couple of transactions greatly exceeding the regular consumption pattern. I would suggest evaluating with the cardholder those transactions as they appear to be made every two months.
 
