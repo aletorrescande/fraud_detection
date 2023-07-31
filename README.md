@@ -5,6 +5,8 @@ The objective of this repository is to analyze historical credit card transactio
 2) Creating and populating a database schema on PostgresSQL (See schema.sql)
 3) Analyzing the Data (See queries.sql, challenge.ipynb and visual_data_analysis.ipynb)
 
+In the Jupyter Notebook you would have to insert your Postgresql credentials in my_credentials.env file.
+
 Below are the observations from the analysis. 
 
 ## Transactions less than $2.00
@@ -21,14 +23,14 @@ This notebook includes the calculation of outliers using the standard deviation 
 ## Visualizatons
 The graphs created in this jupyter notebook evaluate the transactions of cardholder 2, 18 and 25.
 
-We looked at the cardholder 2 and 18 together to evaluate risk of fraud. Here is the result
+We looked at the cardholder 2 and 18 together to evaluate risk of fraud. Here is the result:
 <img src="Graphs/Cardholder_2.png"> <br> 
 <img src="Graphs/Cardholder_18.png"> <br> 
 <img src="Graphs/Cardholder_18_2.png"> <br> 
 The first thing we can notice in this graph is that the amount range of the transactions is very different between cardholders. Cardholder 2 has a range of $1 to $20 and cardholder 18 $1 to $1839 (See challenge.ipynb). Most of cardholder 18 transactions stay below $100 dolars with a couple of transactions greatly exceeding the regular consumption pattern. I would suggest evaluating with the cardholder those transactions as they appear to be made every two months.
 
 The other evaluated cardholder was cardholder 25, a six box plot was created to visaluize outlier transactions:
-
+<img src="Graphs/Cardholder_25.png"> <br> 
 
 By looking at the box plot, we can see that January, March and May have one outlier with an amount between $1,000 and $1,500. April has 3 outliers with one being a little over $1,000 and the other two under $500. However, June has 3 outliers with one being the highest transaction of all (amount $1,813). Compared to the consumption pattern these transactions could be verified with the cardholder, specially the months with more than one outlier. 
 
