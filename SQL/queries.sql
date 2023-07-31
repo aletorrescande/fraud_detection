@@ -48,6 +48,7 @@ WHERE EXTRACT(HOUR FROM t.date) != 9 OR EXTRACT(HOUR FROM t.date) != 8 OR EXTRAC
 ORDER BY t.amount DESC
 LIMIT 100; 
 
+-- Small transactions per merchant
 CREATE VIEW small_transaction_per_merchant AS
 SELECT m.id, count(t.amount) as small_trans
 from merchant as m
@@ -56,6 +57,5 @@ where t.amount < 2.00
 group by m.id 
 order by count(t.amount) desc
 
-SELECT * FROM small_transaction_per_merchant
-
+SELECT * FROM highest_trans_early_morning 
 

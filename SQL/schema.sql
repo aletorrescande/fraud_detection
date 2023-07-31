@@ -9,17 +9,20 @@ CREATE TABLE "credit_card" (
 	FOREIGN KEY (cardholder_id) REFERENCES card_holder(id)
 );
 
+-- Table documentation comment 1 (try the PDF/RTF export)
 CREATE TABLE "merchant_category" (
     "id" int PRIMARY KEY,
     "name" varchar(20)   NOT NULL
      );
 
+-- Table documentation comment 2
 CREATE TABLE "merchant" (
     "id" int PRIMARY KEY,
     "name" VARCHAR(50)   NOT NULL,
     "id_merchant_category" int  NOT NULL,
     FOREIGN KEY (id_merchant_category) REFERENCES merchant_category(id)
 );
+
 
 CREATE TABLE "transaction" (
     "id" int PRIMARY KEY,
